@@ -1,41 +1,55 @@
 package com.example.smart_aquascape.ui.login
 
 import android.app.Activity
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProvider
+import android.content.Context
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
-import android.support.annotation.StringRes
-import android.support.v7.app.AppCompatActivity
+import androidx.annotation.StringRes
+import androidx.appcompat.app.AppCompatActivity
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.Toast
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.smart_aquascape.databinding.ActivityLoginBinding
 
 import com.example.smart_aquascape.R
 import com.example.smart_aquascape.ui.home.HomeActivity
+import java.util.*
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var loginViewModel: LoginViewModel
     private lateinit var binding: ActivityLoginBinding
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val splashScreen = installSplashScreen()
+        sharedPreferences = getSharedPreferences("PREFERENCES_NAME", Context.MODE_PRIVATE)
+        val sessionId = sharedPreferences.getString("SESSION_ID", "EMPTY")
+        if(sessionId != "EMPTY"){
+            startActivity(Intent(this, HomeActivity::class.java))
+            setResult(Activity.RESULT_OK)
+            //Complete and destroy login activity once successful
+            finish()
+        }
         super.onCreate(savedInstanceState)
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // declares variable username
         val username = binding.username
         val password = binding.password
         val login = binding.login
         val loading = binding.loading
 
-        loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
-            .get(LoginViewModel::class.java)
+        loginViewModel = ViewModelProvider(this, LoginViewModelFactory())[LoginViewModel::class.java]
 
         loginViewModel.loginFormState.observe(this@LoginActivity, Observer {
             val loginState = it ?: return@Observer
@@ -59,12 +73,15 @@ class LoginActivity : AppCompatActivity() {
                 showLoginFailed(loginResult.error)
             }
             if (loginResult.success != null) {
-                updateUiWithUser(loginResult.success)
+                var editor = sharedPreferences.edit()
+                editor.putString("SESSION_ID", UUID.randomUUID().toString())
+                editor.commit()
+//                updateUiWithUser(loginResult.success)
+                startActivity(Intent(this, HomeActivity::class.java))
+                setResult(Activity.RESULT_OK)
+                //Complete and destroy login activity once successful
+                finish()
             }
-            setResult(Activity.RESULT_OK)
-
-            //Complete and destroy login activity once successful
-//            finish()
         })
 
         username.afterTextChanged {
@@ -114,7 +131,8 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun showLoginFailed(@StringRes errorString: Int) {
-        Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()
+        val toast = Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT)
+        toast.show();
     }
 }
 

@@ -12,13 +12,13 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_data"
         android:name="com.example.smart_aquascape.ui.home.ui.data.DataFragment"
         android:label="@string/title_data"
         tools:layout="@layout/fragment_data" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_about"
         android:name="com.example.smart_aquascape.ui.home.ui.about.AboutFragment"
         android:label="@string/title_about"
         tools:layout="@layout/fragment_about" />

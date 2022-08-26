@@ -3,15 +3,35 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1945" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/drawable/bg.xml" value="0.1945" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/drawable/cell_border.xml" value="0.1945" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/drawable/cell_data_border.xml" value="0.1945" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/drawable/cell_even_data_border.xml" value="0.1945" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/drawable/circle.xml" value="0.1" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/drawable/ic_baseline_error_24.xml" value="0.1945" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/drawable/ic_wave.xml" value="0.1" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/drawable/img1.xml" value="0.1945" />
         <entry key="..\:/new drive/freelance/aisha/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.13453815261044177" />
         <entry key="..\:/new drive/freelance/aisha/app/src/main/res/layout-w936dp/activity_login.xml" value="0.1287568306010929" />
-        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/layout/activity_home.xml" value="0.1" />
-        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/layout/activity_login.xml" value="0.17074275362318841" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/layout/activity_chart.xml" value="0.10474205315268369" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/layout/activity_home.xml" value="0.5" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/new drive/freelance/aisha/app/src/main/res/layout/fragment_about.xml" value="0.17074275362318841" />
         <entry key="..\:/new drive/freelance/aisha/app/src/main/res/layout/fragment_dashboard.xml" value="0.10729166666666666" />
         <entry key="..\:/new drive/freelance/aisha/app/src/main/res/layout/fragment_data.xml" value="0.17074275362318841" />
-        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/layout/fragment_home.xml" value="0.17074275362318841" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/layout/fragment_first.xml" value="0.17074275362318841" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/layout/fragment_second.xml" value="0.1" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/layout/list_item.xml" value="0.17074275362318841" />
         <entry key="..\:/new drive/freelance/aisha/app/src/main/res/menu/bottom_nav_menu.xml" value="0.209375" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1185" />
+        <entry key="..\:/new drive/freelance/aisha/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1185" />
       </map>
     </option>
   </component>
